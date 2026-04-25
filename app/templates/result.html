@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction</h1>
+      <div class="result">
+        <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="uploaded image" class="preview">
+        <div class="preds">
+          <h3>Prediction</h3>
+          <p class="predicted-class"><strong>{{ predicted_class }}</strong></p>
+          <p class="accuracy">Accuracy: {{ '{:.2%}'.format(accuracy) }}</p>
+          <p><a href="{{ url_for('index') }}">Classify another image</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

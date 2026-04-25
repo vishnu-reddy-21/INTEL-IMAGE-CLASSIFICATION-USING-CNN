@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Intel Image Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Intel Image Classification</h1>
+      <p>Upload an image and the CNN will predict the scene category.</p>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class="flashes">
+            {% for m in messages %}
+              <li>{{ m }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <form action="{{ url_for('upload_predict') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Upload & Predict</button>
+      </form>
+      <p class="note">Train a model with <code>python train.py</code> and ensure <code>outputs/model.h5</code> is present.</p>
+    </div>
+  </body>
+</html>

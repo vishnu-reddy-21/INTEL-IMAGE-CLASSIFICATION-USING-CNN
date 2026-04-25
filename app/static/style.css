@@ -1,0 +1,14 @@
+body { font-family: Arial, Helvetica, sans-serif; background:#fafafa; color:#222; }
+.container { max-width:900px; margin:40px auto; padding:20px; background:white; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+h1 { margin-top:0; }
+.note { color:#666; font-size:0.9em; }
+.result { display:flex; gap:20px; align-items:flex-start; }
+.preview { max-width:320px; border:1px solid #ddd; padding:4px; background:#fff; }
+.preds { flex:1; }
+.predicted-class { font-size:2.5em; margin:20px 0 10px 0; color:#007bff; font-weight:bold; text-transform:capitalize; }
+.accuracy { font-size:1.3em; color:#28a745; margin:0 0 20px 0; }
+.preds a { color:#007bff; text-decoration:none; }
+.preds a:hover { text-decoration:underline; }
+.flashes { color: #c00; }
+button { background:#007bff; color:white; border:none; padding:10px 14px; border-radius:4px; cursor:pointer; }
+button:hover { background:#0056c7; }
