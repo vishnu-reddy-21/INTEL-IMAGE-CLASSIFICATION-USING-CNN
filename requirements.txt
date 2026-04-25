@@ -1,0 +1,8 @@
+flask==2.3.3
+tensorflow>=2.11
+numpy>=1.21
+pillow
+opencv-python
+matplotlib
+scikit-learn
+gunicorn
