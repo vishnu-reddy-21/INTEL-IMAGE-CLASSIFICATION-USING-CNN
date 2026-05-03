@@ -26,6 +26,7 @@ Quick start (local)
 2. Prepare dataset
    
     Download the Intel Image Classification dataset (see data/download_instructions.md) and place extracted folders under `data/Intel/` so that subfolders `seg_train/seg_train/<class>/...` and `seg_test/seg_test/<class>/...` exist.
+    # Dataset https://www.kaggle.com/datasets/puneet6060/intel-image-classification
     # Check training classes
        Get-ChildItem -Directory data\Intel\seg_train\seg_train
     # Check test classes
@@ -33,12 +34,12 @@ Quick start (local)
 
     Run the preprocessing and optionally create train/val splits (the training script will use ImageDataGenerator and can point to `data/Intel/seg_train`).
 
-3. Train model:
+4. Train model:
   python train.py --data-dir data/Intel/seg_train/seg_train --val-dir data/Intel/seg_test/seg_test --epochs 20 --batch-size 32 --out outputs
 
    The trained model will be saved at `outputs/model.h5`.
 
-4. Run the Flask app:
+5. Run the Flask app:
    export FLASK_APP=app or $env:FLASK_APP='app'
    export FLASK_ENV=development or $env:FLASK_ENV='development'
    python -m app.routes
